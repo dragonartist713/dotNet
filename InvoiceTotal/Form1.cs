@@ -46,7 +46,19 @@ namespace InvoiceTotal
         }
          private void btnClearTotals_Click(object sender, EventArgs e)
          {
+            numberOfInvoices = 0;
+            totalOfInvoices = 0m;
+            invoiceAverage = 0m;
+            largestInvoice = 0m;
+            smallestInvoice = Decimal.MaxValue;
 
+            txtNumberOfInvoices.Text = "";
+            txtTotalOfInvoices.Text = "";
+            txtInvoiceAverage.Text = "";
+            txtLargestInvoice.Text = "";
+            txtSmallestInvoice.Text = "";
+
+            txtEnterSubtotal.Focus();
          }
         private void btnExit_Click(object sender, EventArgs e)
         {
