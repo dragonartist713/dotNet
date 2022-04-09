@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtAmountUSD = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.currList = new System.Windows.Forms.ComboBox();
-            this.amountCurr = new System.Windows.Forms.TextBox();
+            this.cmbCurrList = new System.Windows.Forms.ComboBox();
+            this.txtResults = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -61,30 +61,32 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Converts to:";
             // 
-            // currList
+            // cmbCurrList
             // 
-            this.currList.FormattingEnabled = true;
-            this.currList.Items.AddRange(new object[] {
-            "€EUR (Euro)",
-            "¥JPY (Japanese Yen)",
-            "£GBP (British Pound)",
-            "$AUD (Australian Dollar)",
-            "$CAD (Canadian Dollar)"});
-            this.currList.Location = new System.Drawing.Point(128, 75);
-            this.currList.Name = "currList";
-            this.currList.Size = new System.Drawing.Size(100, 23);
-            this.currList.TabIndex = 3;
+            this.cmbCurrList.FormattingEnabled = true;
+            this.cmbCurrList.Items.AddRange(new object[] {
+            "Euro (EUR)",
+            "Japanese Yen (JPY)",
+            "Mexican Peso (MXN)",
+            "Canadian Dollar (CAD)",
+            "Indian Rupee (INR)"});
+            this.cmbCurrList.Location = new System.Drawing.Point(128, 75);
+            this.cmbCurrList.Name = "cmbCurrList";
+            this.cmbCurrList.Size = new System.Drawing.Size(100, 23);
+            this.cmbCurrList.TabIndex = 3;
             // 
-            // amountCurr
+            // txtResults
             // 
-            this.amountCurr.Location = new System.Drawing.Point(128, 104);
-            this.amountCurr.Name = "amountCurr";
-            this.amountCurr.Size = new System.Drawing.Size(100, 23);
-            this.amountCurr.TabIndex = 4;
+            this.txtResults.Enabled = false;
+            this.txtResults.Location = new System.Drawing.Point(128, 104);
+            this.txtResults.Name = "txtResults";
+            this.txtResults.Size = new System.Drawing.Size(100, 23);
+            this.txtResults.TabIndex = 4;
+            this.txtResults.TabStop = false;
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(157, 150);
+            this.btnCalculate.Location = new System.Drawing.Point(139, 148);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(75, 23);
             this.btnCalculate.TabIndex = 5;
@@ -96,10 +98,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 231);
+            this.ClientSize = new System.Drawing.Size(279, 231);
             this.Controls.Add(this.btnCalculate);
-            this.Controls.Add(this.amountCurr);
-            this.Controls.Add(this.currList);
+            this.Controls.Add(this.txtResults);
+            this.Controls.Add(this.cmbCurrList);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtAmountUSD);
             this.Controls.Add(this.label1);
@@ -115,8 +117,8 @@
         private Label label1;
         private TextBox txtAmountUSD;
         private Label label2;
-        private ComboBox currList;
-        private TextBox amountCurr;
+        private ComboBox cmbCurrList;
+        private TextBox txtResults;
         private Button btnCalculate;
     }
 }
