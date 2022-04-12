@@ -32,10 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtMonthlyInvestment = new System.Windows.Forms.TextBox();
+            this.txtInterestRate = new System.Windows.Forms.TextBox();
+            this.txtYears = new System.Windows.Forms.TextBox();
+            this.txtFutureValue = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -76,33 +76,34 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Future Value:";
             // 
-            // textBox1
+            // txtMonthlyInvestment
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 23);
-            this.textBox1.TabIndex = 4;
+            this.txtMonthlyInvestment.Location = new System.Drawing.Point(148, 28);
+            this.txtMonthlyInvestment.Name = "txtMonthlyInvestment";
+            this.txtMonthlyInvestment.Size = new System.Drawing.Size(201, 23);
+            this.txtMonthlyInvestment.TabIndex = 4;
             // 
-            // textBox2
+            // txtInterestRate
             // 
-            this.textBox2.Location = new System.Drawing.Point(148, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(201, 23);
-            this.textBox2.TabIndex = 5;
+            this.txtInterestRate.Location = new System.Drawing.Point(148, 69);
+            this.txtInterestRate.Name = "txtInterestRate";
+            this.txtInterestRate.Size = new System.Drawing.Size(201, 23);
+            this.txtInterestRate.TabIndex = 5;
             // 
-            // textBox3
+            // txtYears
             // 
-            this.textBox3.Location = new System.Drawing.Point(148, 117);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(201, 23);
-            this.textBox3.TabIndex = 6;
+            this.txtYears.Location = new System.Drawing.Point(148, 117);
+            this.txtYears.Name = "txtYears";
+            this.txtYears.Size = new System.Drawing.Size(201, 23);
+            this.txtYears.TabIndex = 6;
             // 
-            // textBox4
+            // txtFutureValue
             // 
-            this.textBox4.Location = new System.Drawing.Point(148, 167);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(201, 23);
-            this.textBox4.TabIndex = 7;
+            this.txtFutureValue.Location = new System.Drawing.Point(148, 167);
+            this.txtFutureValue.Name = "txtFutureValue";
+            this.txtFutureValue.ReadOnly = true;
+            this.txtFutureValue.Size = new System.Drawing.Size(201, 23);
+            this.txtFutureValue.TabIndex = 7;
             // 
             // btnCalculate
             // 
@@ -112,6 +113,7 @@
             this.btnCalculate.TabIndex = 8;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // btnExit
             // 
@@ -121,6 +123,7 @@
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
             // FutureValue
             // 
@@ -129,10 +132,10 @@
             this.ClientSize = new System.Drawing.Size(361, 286);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCalculate);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFutureValue);
+            this.Controls.Add(this.txtYears);
+            this.Controls.Add(this.txtInterestRate);
+            this.Controls.Add(this.txtMonthlyInvestment);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -150,10 +153,10 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox txtMonthlyInvestment;
+        private TextBox txtInterestRate;
+        private TextBox txtYears;
+        private TextBox txtFutureValue;
         private Button btnCalculate;
         private Button btnExit;
     }

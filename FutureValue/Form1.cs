@@ -32,18 +32,18 @@ namespace FutureValue
                 }
             }
 
-            //catch (FormatException)
-            //{
-            //    MessageBox.Show(
-            //        "Invalid numeric format. Please check all entries.",
-            //        "Entry Error");
-            //}
-            //catch (OverflowException)
-            //{
-            //    MessageBox.Show(
-            //        "Overflow error. Please enter smaller values.",
-            //        "Entry Error");
-            //}
+            catch (FormatException)
+            {
+                MessageBox.Show(
+                    "Invalid numeric format. Please check all entries.",
+                    "Entry Error");
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show(
+                    "Overflow error. Please enter smaller values.",
+                    "Entry Error");
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(
@@ -140,10 +140,9 @@ namespace FutureValue
             return futureValue;
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnExit_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }
