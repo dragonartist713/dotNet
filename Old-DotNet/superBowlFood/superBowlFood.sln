@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "superBowlFood", "superBowlFood.csproj", "{96822D1E-0552-4B11-8539-88EB108A03A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96822D1E-0552-4B11-8539-88EB108A03A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96822D1E-0552-4B11-8539-88EB108A03A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96822D1E-0552-4B11-8539-88EB108A03A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96822D1E-0552-4B11-8539-88EB108A03A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EDCDF3E-AA80-453F-8D01-95A81BFEC9E8}
+	EndGlobalSection
+EndGlobal
