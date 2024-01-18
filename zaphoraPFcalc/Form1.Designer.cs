@@ -70,17 +70,25 @@
             this.radNormal = new System.Windows.Forms.RadioButton();
             this.radFancy = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnExit = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -89,10 +97,10 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -101,6 +109,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Purple;
             this.tabPage1.Controls.Add(this.txtWrongness);
             this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.btnCalculateSpellbook);
@@ -118,16 +127,17 @@
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.ForeColor = System.Drawing.Color.White;
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(778, 365);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Spellbook Value";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // txtWrongness
             // 
+            this.txtWrongness.BackColor = System.Drawing.Color.White;
             this.txtWrongness.Location = new System.Drawing.Point(99, 331);
             this.txtWrongness.Name = "txtWrongness";
             this.txtWrongness.ReadOnly = true;
@@ -146,16 +156,21 @@
             // 
             // btnCalculateSpellbook
             // 
+            this.btnCalculateSpellbook.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnCalculateSpellbook.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnCalculateSpellbook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnCalculateSpellbook.ForeColor = System.Drawing.Color.White;
             this.btnCalculateSpellbook.Location = new System.Drawing.Point(631, 288);
             this.btnCalculateSpellbook.Name = "btnCalculateSpellbook";
             this.btnCalculateSpellbook.Size = new System.Drawing.Size(141, 66);
             this.btnCalculateSpellbook.TabIndex = 18;
             this.btnCalculateSpellbook.Text = "Calculate";
-            this.btnCalculateSpellbook.UseVisualStyleBackColor = true;
+            this.btnCalculateSpellbook.UseVisualStyleBackColor = false;
             this.btnCalculateSpellbook.Click += new System.EventHandler(this.btnCalculateSpellbook_Click);
             // 
             // txtTrueSell
             // 
+            this.txtTrueSell.BackColor = System.Drawing.Color.White;
             this.txtTrueSell.Location = new System.Drawing.Point(99, 214);
             this.txtTrueSell.Name = "txtTrueSell";
             this.txtTrueSell.ReadOnly = true;
@@ -165,6 +180,7 @@
             // 
             // txtTrueValue
             // 
+            this.txtTrueValue.BackColor = System.Drawing.Color.White;
             this.txtTrueValue.Location = new System.Drawing.Point(99, 168);
             this.txtTrueValue.Name = "txtTrueValue";
             this.txtTrueValue.ReadOnly = true;
@@ -174,6 +190,7 @@
             // 
             // txtAppraiseDC
             // 
+            this.txtAppraiseDC.BackColor = System.Drawing.Color.White;
             this.txtAppraiseDC.Location = new System.Drawing.Point(99, 122);
             this.txtAppraiseDC.Name = "txtAppraiseDC";
             this.txtAppraiseDC.ReadOnly = true;
@@ -184,6 +201,7 @@
             // 
             // txtAppraiseCheck
             // 
+            this.txtAppraiseCheck.BackColor = System.Drawing.Color.White;
             this.txtAppraiseCheck.Location = new System.Drawing.Point(99, 75);
             this.txtAppraiseCheck.Name = "txtAppraiseCheck";
             this.txtAppraiseCheck.Size = new System.Drawing.Size(126, 23);
@@ -192,6 +210,7 @@
             // 
             // txtPlayerValue
             // 
+            this.txtPlayerValue.BackColor = System.Drawing.Color.White;
             this.txtPlayerValue.Location = new System.Drawing.Point(393, 289);
             this.txtPlayerValue.Name = "txtPlayerValue";
             this.txtPlayerValue.ReadOnly = true;
@@ -210,6 +229,7 @@
             // 
             // txtPlayerSell
             // 
+            this.txtPlayerSell.BackColor = System.Drawing.Color.White;
             this.txtPlayerSell.Location = new System.Drawing.Point(393, 331);
             this.txtPlayerSell.Name = "txtPlayerSell";
             this.txtPlayerSell.ReadOnly = true;
@@ -293,6 +313,7 @@
             // 
             // txtLevel9Spells
             // 
+            this.txtLevel9Spells.BackColor = System.Drawing.Color.White;
             this.txtLevel9Spells.Location = new System.Drawing.Point(321, 229);
             this.txtLevel9Spells.Name = "txtLevel9Spells";
             this.txtLevel9Spells.Size = new System.Drawing.Size(202, 23);
@@ -301,6 +322,7 @@
             // 
             // txtLevel8Spells
             // 
+            this.txtLevel8Spells.BackColor = System.Drawing.Color.White;
             this.txtLevel8Spells.Location = new System.Drawing.Point(321, 173);
             this.txtLevel8Spells.Name = "txtLevel8Spells";
             this.txtLevel8Spells.Size = new System.Drawing.Size(202, 23);
@@ -309,6 +331,7 @@
             // 
             // txtLevel7Spells
             // 
+            this.txtLevel7Spells.BackColor = System.Drawing.Color.White;
             this.txtLevel7Spells.Location = new System.Drawing.Point(321, 122);
             this.txtLevel7Spells.Name = "txtLevel7Spells";
             this.txtLevel7Spells.Size = new System.Drawing.Size(202, 23);
@@ -317,6 +340,7 @@
             // 
             // txtLevel6Spells
             // 
+            this.txtLevel6Spells.BackColor = System.Drawing.Color.White;
             this.txtLevel6Spells.Location = new System.Drawing.Point(321, 72);
             this.txtLevel6Spells.Name = "txtLevel6Spells";
             this.txtLevel6Spells.Size = new System.Drawing.Size(202, 23);
@@ -325,6 +349,7 @@
             // 
             // txtLevel5Spells
             // 
+            this.txtLevel5Spells.BackColor = System.Drawing.Color.White;
             this.txtLevel5Spells.Location = new System.Drawing.Point(321, 28);
             this.txtLevel5Spells.Name = "txtLevel5Spells";
             this.txtLevel5Spells.Size = new System.Drawing.Size(202, 23);
@@ -333,6 +358,7 @@
             // 
             // txtLevel4Spells
             // 
+            this.txtLevel4Spells.BackColor = System.Drawing.Color.White;
             this.txtLevel4Spells.Location = new System.Drawing.Point(64, 229);
             this.txtLevel4Spells.Name = "txtLevel4Spells";
             this.txtLevel4Spells.Size = new System.Drawing.Size(202, 23);
@@ -341,6 +367,7 @@
             // 
             // txtLevel3Spells
             // 
+            this.txtLevel3Spells.BackColor = System.Drawing.Color.White;
             this.txtLevel3Spells.Location = new System.Drawing.Point(64, 173);
             this.txtLevel3Spells.Name = "txtLevel3Spells";
             this.txtLevel3Spells.Size = new System.Drawing.Size(202, 23);
@@ -349,6 +376,7 @@
             // 
             // txtLevel2Spells
             // 
+            this.txtLevel2Spells.BackColor = System.Drawing.Color.White;
             this.txtLevel2Spells.Location = new System.Drawing.Point(64, 122);
             this.txtLevel2Spells.Name = "txtLevel2Spells";
             this.txtLevel2Spells.Size = new System.Drawing.Size(202, 23);
@@ -357,6 +385,7 @@
             // 
             // txtLevel1Spells
             // 
+            this.txtLevel1Spells.BackColor = System.Drawing.Color.White;
             this.txtLevel1Spells.Location = new System.Drawing.Point(64, 72);
             this.txtLevel1Spells.Name = "txtLevel1Spells";
             this.txtLevel1Spells.Size = new System.Drawing.Size(202, 23);
@@ -365,6 +394,7 @@
             // 
             // txtLevel0Spells
             // 
+            this.txtLevel0Spells.BackColor = System.Drawing.Color.White;
             this.txtLevel0Spells.Location = new System.Drawing.Point(64, 28);
             this.txtLevel0Spells.Name = "txtLevel0Spells";
             this.txtLevel0Spells.Size = new System.Drawing.Size(202, 23);
@@ -497,73 +527,105 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Indigo;
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(778, 365);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Acrobatics DC";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radioButton3);
+            this.groupBox3.Controls.Add(this.radioButton2);
+            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox3.Location = new System.Drawing.Point(6, 257);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(230, 102);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Type of Check";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(106, 15);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label18.Location = new System.Drawing.Point(15, 18);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(85, 15);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Acrobatics DC:";
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.Blue;
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(778, 365);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Alcohol Tolerance";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.Green;
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(778, 365);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Jump DC";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 24);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(778, 365);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Mating";
-            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // tabPage6
             // 
+            this.tabPage6.BackColor = System.Drawing.Color.Gold;
             this.tabPage6.Location = new System.Drawing.Point(4, 24);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(778, 365);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Crafting";
-            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // tabPage7
             // 
+            this.tabPage7.BackColor = System.Drawing.Color.DarkOrange;
             this.tabPage7.Location = new System.Drawing.Point(4, 24);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage7.Size = new System.Drawing.Size(778, 365);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Traps";
-            this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // tabPage8
             // 
+            this.tabPage8.BackColor = System.Drawing.Color.Red;
             this.tabPage8.Location = new System.Drawing.Point(4, 24);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Size = new System.Drawing.Size(778, 365);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Leadership";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.HotPink;
+            this.tabPage5.Location = new System.Drawing.Point(4, 24);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(778, 365);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Mating";
             // 
             // btnExit
             // 
@@ -575,10 +637,44 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(17, 22);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(184, 19);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Cross Narrow/Uneven Ground";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(17, 47);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(207, 19);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Move through Threatened Squares";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(17, 72);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(111, 19);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Jumping/Falling";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
             // frmZaphoraCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(800, 491);
             this.Controls.Add(this.btnExit);
@@ -592,6 +688,10 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -647,5 +747,11 @@
         private Button btnExit;
         private TextBox txtWrongness;
         private Label label17;
+        private GroupBox groupBox3;
+        private TextBox textBox1;
+        private Label label18;
+        private RadioButton radioButton3;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
     }
 }
