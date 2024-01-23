@@ -7,7 +7,7 @@ namespace Assignment01
         //name: string
         public string Name {get; set;}
         //AccountList: BankAccount[]
-        BankAccount[] AccountList
+        BankAccount[] AccountList = {}
 
         //nextopenindex: int
         public int NextOpenIndex //tracks next available index in account list array
@@ -25,7 +25,7 @@ namespace Assignment01
             
         }
         //AddAccount(account: BankAccount): bool
-        //Transfer(accTransferFrom: BankAccount, accTransferTo: CankAccount, amount: double): bool
+        //Transfer(accTransferFrom: BankAccount, accTransferTo: BankAccount, amount: decimal): bool
         //AccountEcists(accountNumber: string): bool
         //Capacity(): int
     }
