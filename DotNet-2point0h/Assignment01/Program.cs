@@ -7,7 +7,7 @@ namespace Assignment01
         //name: string
         public string Name {get; set;}
         //AccountList: BankAccount[]
-        BankAccount[] AccountList = {}
+        public BankAccount[] AccountList
 
         //nextopenindex: int
         public int NextOpenIndex //tracks next available index in account list array
@@ -33,9 +33,14 @@ namespace Assignment01
     class BankAccount{
         //==============Attributes===============
         // MaxNegativeAmount: decimal = -50 {get; private set}
+        public decimal MaxNegativeAmount = -50
         // HoldingBank: Bank
+        public Bank HoldingBank
         // AccountNumber: string
+        public string AccountNumber
         // Balance: decimal
+        public decimal Balance
+
         //==============Methods==================
         //BankAccount(holdingBank: Bank, accountNum: string)
         public BankAccount(){
