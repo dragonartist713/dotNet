@@ -25,9 +25,22 @@ namespace Assignment01
             
         }
         //AddAccount(account: BankAccount): bool
+        public bool AddAccount(BankAccount account){
+
+        }
         //Transfer(accTransferFrom: BankAccount, accTransferTo: BankAccount, amount: decimal): bool
+        public bool Transfer(BankAccount accTransferFrom, BankAccount accTransferTo, decimal amount){
+
+        }
         //AccountEcists(accountNumber: string): bool
+        public bool AccountExists(string accountNumber){
+
+        }
         //Capacity(): int
+        public int Capacity(){
+
+        }
+        
     }
 
     class BankAccount{
@@ -43,14 +56,36 @@ namespace Assignment01
 
         //==============Methods==================
         //BankAccount(holdingBank: Bank, accountNum: string)
-        public BankAccount(){
-            throw new InvalidOperationException("Cannot create account: The bank has no room for new accounts.")
+        public BankAccount(Bank holdingBank, string accountNum){
+            if(0 >= holdingBank.Capacity()){
+                //out of room
+                throw new InvalidOperationException("Cannot create account: The bank has no room for new accounts.")
+            }
+            this.HoldingBank = holdingBank;
+            this.AccountNumber = accountNum;
+
+            holdingBank.AddAccount(this);
         }
         //BankAccount(holdingBank: Bank, accountNum: string, accountBalance: decimal)
+        public BankAccount(Bank holdingBank, string accountNum, decimal accountBalance){
+            //throw new InvalidOperationException("Cannot create account: The bank has no room for new accounts.")
+        }
         //Deposit(amount: decimal): void
+        public void Deposit(decimal amount){
+
+        }
         //Withdraw(amount: decimal): decimal
+        public decimal Withdraw(decimal amount){
+
+        }
         //CheckBalance(): decimal
+        public decimal CheckBalance(){
+
+        }
         //GetMaxNegativeAmount(): decimal
+        public decimal DetMaxNegativeAmount(){
+
+        }
     }
     
     class Program
