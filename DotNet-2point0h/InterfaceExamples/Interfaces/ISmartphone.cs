@@ -2,5 +2,5 @@ namespace InterfaceExamples.Interfaces;
 
 public interface ISmartphone {
     void BrowseInternet();
-    void UseAssistant();
+    void UseAssistant(string givenCommand);
 }
