@@ -19,14 +19,43 @@ Android phoneD = new Android {
             Model = "Samsung Galaxy 12"
         };
 
-ListLecture<ISmartphone> smartphones = new List<ISmartphone>{
+// phoneA.BrowseInternet(); // iPhone
+// phoneB.BrowseInternet(); // Android
+
+// phoneA.UseAssistant("Check Weather"); // Valid command
+// phoneA.UseAssistant("Test"); // Invalid command
+
+
+ISmartphone phoneE = new iPhone {
+                        Brand = "Apple",
+                        Model = "iPhone 16"
+                    };
+
+ISmartphone phoneF = new Android {
+                        Brand = "Google",
+                        Model = "Samsung Galaxy 20"
+                    };
+
+// phoneE.BrowseInternet();
+// phoneF.BrowseInternet();
+
+// phoneE = new Android {
+//             Brand = "Google",
+//             Model = "Samsung Galaxy 208"
+//         };
+// phoneE.BrowseInternet();
+
+// phoneA.CallSteveJobs();
+
+/////////////////////////////////////
+
+List<ISmartphone> smartphones = new List<ISmartphone>{
     phoneA,
     phoneB,
     phoneC,
     phoneD
-
 };
 
-foreach(ISmartphone phone in smartphones){
+foreach(ISmartphone phone in smartphones) {
     phone.BrowseInternet();
-};
+}

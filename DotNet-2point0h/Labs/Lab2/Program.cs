@@ -6,7 +6,11 @@ namespace Lab2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Person Jack = new Person("Jack", "Sparrow", "38");
+            Person Barbossa = new Person("Hector", "Barbossa", "60");
+            Person Will = new Person("Willaim", "Turner", "29");
+            Person Elizabeth = new Person("Elizabeth", "Swann", "29");
+            Car BlackPearl = new Car (4, 12)
         }
     }
 }
