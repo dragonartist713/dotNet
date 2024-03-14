@@ -1,3 +1,4 @@
+//c# 1.26.0
 namespace Assignment01{
     class Bank {
 
@@ -8,14 +9,14 @@ namespace Assignment01{
         public BankAccount[] AccountList {get; set;}
 
         //nextopenindex: int
-        public int NextOpenIndex {get; set} //tracks next available index in account list array
+        public int NextOpenIndex {get; set;} //tracks next available index in account list array
 
         //==============Methods==================
 
         //bank(bankName: string, maxNumAccounts: int)
         public Bank(string bankName, int maxNumAccounts){
-            this.Name = bankName
-            this.AccountList.length = maxNumAccounts
+            this.Name = bankName;
+            this.AccountList.length = maxNumAccounts;
         }
 
         //bank(bankName: string, bankAccounts: BankAccount[])
