@@ -1,8 +1,13 @@
-class BankAccount{
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace Assignment01{
+    class BankAccount{
         //==============Attributes==============={
         // MaxNegativeAmount: decimal = -50 {get; private set
-        decimal MaxNegativeAmount { 
-            public get { return MaxNegativeAmount; }
+        public decimal MaxNegativeAmount { 
+            get { return MaxNegativeAmount; }
             private set { MaxNegativeAmount = -50; }
         }
         // HoldingBank: Bank
@@ -17,10 +22,11 @@ class BankAccount{
         public BankAccount(Bank holdingBank, string accountNum){
             if(0 >= holdingBank.Capacity()){
                 //out of room
-                throw new InvalidOperationException("Cannot create account: The bank has no room for new accounts.")
+                throw new InvalidOperationException("Cannot create account: The bank has no room for new accounts.");
             }
             this.HoldingBank = holdingBank;
             this.AccountNumber = accountNum;
+            this.Balance = 0;
 
             holdingBank.AddAccount(this);
         }
@@ -28,7 +34,7 @@ class BankAccount{
         public BankAccount(Bank holdingBank, string accountNum, decimal accountBalance){
             if(0 >= holdingBank.Capacity()){
                 //out of room
-                throw new InvalidOperationException("Cannot create account: The bank has no room for new accounts.")
+                throw new InvalidOperationException("Cannot create account: The bank has no room for new accounts.");
             }
             this.HoldingBank = holdingBank;
             this.AccountNumber = accountNum;
@@ -42,7 +48,7 @@ class BankAccount{
         }
         //Withdraw(amount: decimal): decimal
         public decimal Withdraw(decimal amount){
-            this.Balance -= amount;
+            return this.Balance -= amount;
         }
         //CheckBalance(): decimal
         public decimal CheckBalance(){
@@ -50,6 +56,7 @@ class BankAccount{
         }
         //GetMaxNegativeAmount(): decimal
         public decimal GetMaxNegativeAmount(){
-
+            return MaxNegativeAmount;
         }
     }
+}
