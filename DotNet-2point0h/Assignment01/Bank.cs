@@ -11,7 +11,7 @@ namespace Assignment01{
         public string Name {get; set;}
         //AccountList: BankAccount[]
         //public BankAccount[] AccountList {get; set;}
-        List<BankAccount> AccountList = new List<BankAccount>();
+        public List<BankAccount> AccountList = new List<BankAccount>();
 
         //nextopenindex: int
         public int NextOpenIndex {get; set;} //tracks next available index in account list array
@@ -41,29 +41,48 @@ namespace Assignment01{
                     }                    
                 }
                 this.AccountList.Add(account);
+                
                 return true;
             }
-            Console.WriteLine("This bank has no room for accounts.");
+            
             return false;
         }
         //Transfer(accTransferFrom: BankAccount, accTransferTo: BankAccount, amount: decimal): bool
         public bool Transfer(BankAccount accTransferFrom, BankAccount accTransferTo, decimal amount){
-            if(accTransferFrom.Balance < amount){
-                Console.WriteLine($"There are insufficient funds in account ${accTransferFrom.AccountNumber}.");
-                return false;
+            bool attempt = true;
+            if(AccountExists(accTransferFrom.AccountNumber) == false || AccountExists(accTransferTo.AccountNumber) == false){
+                Console.WriteLine("That account doesn't exist.");
+                attempt = false;
+                return attempt;
             }
-            accTransferFrom.Balance -= amount;
-            accTransferTo.Balance += amount;
-            Console.WriteLine($"Funds successfully transfered from ${accTransferFrom.AccountNumber} to ${accTransferTo.AccountNumber}.");
-            return true;
+            if(accTransferFrom.Balance < amount){
+                Console.WriteLine($"There are insufficient funds in account {accTransferFrom.AccountNumber}.");
+                attempt = false;
+                return attempt;
+            }
+            if(attempt == true){
+                accTransferFrom.Balance -= amount;
+                accTransferTo.Balance += amount;
+                Console.WriteLine($"Funds successfully transfered from account {accTransferFrom.AccountNumber} to account {accTransferTo.AccountNumber}.");
+                return attempt;
+            }
+            return attempt;
         }
         //AccountEcists(accountNumber: string): bool
         public bool AccountExists(string accountNumber){
-
+            bool exists = false;
+            for(int i = 0; i < this.AccountList.Count; i++){
+                if(this.AccountList[i].AccountNumber == accountNumber){
+                    exists = true;
+                    break;
+                }
+                exists = false;
+            };
+            return exists;
         }
         //Capacity(): int
         public int Capacity(){
-
+           return (this.AccountList.Capacity - this.AccountList.Count);
         }
         
     }

@@ -48,7 +48,12 @@ namespace Assignment01{
         }
         //Withdraw(amount: decimal): decimal
         public decimal Withdraw(decimal amount){
-            return this.Balance -= amount;
+            if(this.Balance >= amount){
+                return this.Balance -= amount;
+            }else{
+                Console.WriteLine("This account doesn't have sufficient funds for that operation.");
+                return this.Balance;
+            }
         }
         //CheckBalance(): decimal
         public decimal CheckBalance(){

@@ -11,7 +11,7 @@ namespace Assignment01
         {
             Console.WriteLine("=================== PROMPT 1 BEGIN ===================");
             //instantiate a Bank
-                  Bank altra = new Bank("Altra",100);
+                  Bank altra = new Bank("Altra",3);
 
             Console.WriteLine("=================== PROMPT 1 END ===================\n");
 		
@@ -34,42 +34,49 @@ namespace Assignment01
 
             Console.WriteLine("=================== PROMPT 4 BEGIN ===================");
 		//Withdraw Money
-            /* TODO: Write your code here. */
+                  altraAcct3.Withdraw(5);
+                 
 
             Console.WriteLine("=================== PROMPT 4 END ===================\n");
 
 
             Console.WriteLine("=================== PROMPT 5 BEGIN ===================");
 		//Check Account Balance
-            /* TODO: Write your code here. */
+                  Console.WriteLine(altraAcct3.Balance);
 
             Console.WriteLine("=================== PROMPT 5 END ===================\n");
 
 
             Console.WriteLine("=================== PROMPT 6 BEGIN ===================");
 		//Handle Insufficient Funds
-            /* TODO: Write your code here. */
+                  altraAcct1.Withdraw(20);
 
             Console.WriteLine("=================== PROMPT 6 END ===================\n");
 
 
             Console.WriteLine("=================== PROMPT 7 BEGIN ===================");
 		//List all accounts in a bank
-            /* TODO: Write your code here. */
+                  foreach(BankAccount acc in altra.AccountList){
+                        Console.WriteLine($"Account Number: {acc.AccountNumber} Account Balance: ${acc.Balance}");
+                  }
 
             Console.WriteLine("=================== PROMPT 7 END ===================\n");
 
 
             Console.WriteLine("=================== PROMPT 8 BEGIN ===================");
 		//transfer funds between accounts
-            /* TODO: Write your code here. */
+                  altra.Transfer(altraAcct3,altraAcct1,20);
 
             Console.WriteLine("=================== PROMPT 8 END ===================\n");
 
 
             Console.WriteLine("=================== PROMPT 9 BEGIN ===================");
 		//bank capacity check
-            /* TODO: Write your code here. */
+                  try{
+                        BankAccount altraAcct4 = new BankAccount(altra, "004", 500);
+                  }catch{
+                        Console.WriteLine("This bank has no room for accounts.");
+                  };
 
             Console.WriteLine("=================== PROMPT 9 END ===================\n");
         }
