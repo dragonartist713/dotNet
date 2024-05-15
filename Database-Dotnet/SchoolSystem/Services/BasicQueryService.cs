@@ -10,44 +10,53 @@ public class BasicQueryService{
     private ApplicationDbContext _context;
 		
 		// TODO: Use dependency injection to initialize the database context.
-    public BasicQueryService() {
-			
+        
+    public BasicQueryService(ApplicationDbContext context) {
+		_context = context;
     }
 
     public List<string> GetAllInstructorNames(){ 
-	    // TODO: Implement.
+	    return _context.Instructors.Select(instructor => instructor.LastName).ToList();
     }
 
     public List<string> GetStudentsInCourse(string courseName){ 
         // TODO: Implement.
+        return null;
     }
 
     public List<string> GetDepartmentsWithMoreThanOneCourses(){ 
         // TODO: Implement.
+        return null;
     }
 
     public string GetDepartmentWithMostCourses(){ 
         // TODO: Implement.
+        return null;
     }
 
     public List<string> GetStudentsEnrolledInMoreThanFiveCourses(){ 
 	    // TODO: Implement.
+        return null;
     }
 
     public List<string> GetInstructorsInDepartment(string departmentName){ 
 	    // TODO: Implement.
+        return null;
     }
 
     public List<string> GetCoursesByInstructor(string instructorName){ 
 	    // TODO: Implement.
+        return null;
     }
 
     public List<string> GetStudentsWithNoCourses(){ 
         // TODO: Implement.
+        return null;
     }
 
     public string GetInstructorWithMostCourses(){
         // TODO: Implement.
+        return null;
     }
 
     /*
@@ -59,6 +68,7 @@ public class BasicQueryService{
     */   
     public Dictionary<int, List<string>> GetStudentsGroupedByEnrollmentYear(){ 
         // TODO: Implement.
+        return null;
     }
 
 
@@ -71,6 +81,7 @@ public class BasicQueryService{
     */
     public Dictionary<string, List<string>> GetCoursesGroupedByDepartment(){ 
 				// TODO: Implement.
+                return null;
     }
 
     /*
@@ -85,6 +96,7 @@ public class BasicQueryService{
     */
     public Dictionary<string, List<string>> GetStudentsGroupedByCourse(){
         // TODO: Implement.
+        return null;
     }
 
 

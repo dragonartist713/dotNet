@@ -8,7 +8,7 @@ using System.Collections.Generic;
 ServiceProvider _serviceProvider;
 SeedingService _seedingService;
 // DatabaseService _dbService;
-// BasicQueryService _basicQueryService;
+BasicQueryService _basicQueryService;
 
 
 var services = new ServiceCollection();
@@ -16,11 +16,15 @@ var services = new ServiceCollection();
 services.AddDbContext<ApplicationDbContext>();
 services.AddScoped<SeedingService>();
 // services.AddScoped<DatabaseService>();
-// services.AddScoped<BasicQueryService>();
+services.AddScoped<BasicQueryService>();
 
 _serviceProvider = services.BuildServiceProvider();
 _seedingService = _serviceProvider.GetRequiredService<SeedingService>();
 // _dbService = _serviceProvider.GetRequiredService<DatabaseService>();
-// _basicQueryService = _serviceProvider.GetRequiredService<BasicQueryService>();
+_basicQueryService = _serviceProvider.GetRequiredService<BasicQueryService>();
 
 _seedingService.SeedDatabase();
+var instructorNames = _basicQueryService.GetAllInstructorNames();
+foreach(string instrName in instructorNames){
+    Console.WriteLine(instrName);
+}
