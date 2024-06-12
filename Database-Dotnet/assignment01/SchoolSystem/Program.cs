@@ -26,35 +26,33 @@ _seedingService.SeedDatabase();
 
 Console.WriteLine("============ NUMBER 1 - GetAllInstructorNames() ===================");
 // TODO: Call GetAllInstructorNames() and then print the results.
-foreach (string name in list){
-    _basicQueryService.GetAllInstructorNames();
-};
+
+_basicQueryService.GetAllInstructorNames().ForEach(Console.WriteLine);
 
 
 Console.WriteLine("============ NUMBER 2 - GetStudentsInCourse() ===================");
 // TODO: Call GetStudentsInCourse() and then print the results for a specific course.
-// Console.WriteLine(_basicQueryService.GetStudentsInCourse("Calculus"));
+_basicQueryService.GetStudentsInCourse("Calculus").ForEach(Console.WriteLine);
 
-Console.WriteLine("============ NUMBER 3 - GetDepartmentsWithMoreThanOneCourses() ===================");
-// TODO: Call GetDepartmentsWithMoreThanOneCourses() and then print the results.
-// Console.WriteLine(GetDepartmentsWithMoreThanOneCourses());
+Console.WriteLine("============ NUMBER 3 - GetDepartmentsWithCourses() ===================");
+// TODO: Call GetDepartmentsWithCourses() and then print the results.
+_basicQueryService.GetDepartmentsWithCourses().ForEach(Console.WriteLine);
 
 Console.WriteLine("============ NUMBER 4 - GetDepartmentWithMostCourses() ===================");
 // TODO: Call GetDepartmentWithMostCourses() and then print the result.
-// Console.WriteLine(GetDepartmentWithMostCourses());
+
 
 Console.WriteLine("============ NUMBER 5 - GetStudentsEnrolledInMoreThanFiveCourses() ===================");
 // TODO: Call GetStudentsEnrolledInMoreThanFiveCourses() and then print the results.
-// Console.WriteLine(GetStudentsEnrolledInMoreThanFiveCourses());
+
 
 Console.WriteLine("============ NUMBER 6 - GetCoursesByInstructor() ===================");
 // TODO: Call GetCoursesByInstructor() with a specific instructor name and then print the results.
-// Console.WriteLine(GetCoursesByInstructor());
+
 
 Console.WriteLine("============ NUMBER 7 - GetStudentsWithNoCourses() ===================");
 // TODO: Call GetStudentsWithNoCourses() and then print the results.
-// Console.WriteLine(GetStudentsWithNoCourses());
+_basicQueryService.GetStudentsWithNoCourses().ForEach(Console.WriteLine);
 
 Console.WriteLine("============ NUMBER 8 - GetInstructorWithMostCourses() ===================");
 // TODO: Call GetInstructorWithMostCourses() and then print the result.
-// Console.WriteLine(GetInstructorWithMostCourses());

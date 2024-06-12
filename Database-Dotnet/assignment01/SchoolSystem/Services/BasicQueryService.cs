@@ -62,7 +62,10 @@ public class BasicQueryService{
     public List<string> GetStudentsWithNoCourses(){ 
         // TODO: Implement.
 
-        return null;
+        return _context.Students
+                        .Where(student => student.CourseStudent.Count < 1)
+                        .Select(student => student.LastName)
+                        .ToList();
     }
 
     public string GetInstructorWithMostCourses(){
